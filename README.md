@@ -1,2 +1,6 @@
 # diabolical-doormouse
-media wiki chef cookbook
+Empty repo, just learning some advanced git techniques.
+
+##just testing
+ok.
+again
