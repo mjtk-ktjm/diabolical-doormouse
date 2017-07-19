@@ -11,6 +11,10 @@ Empty repo, just learning some advanced `git` techniques.
 
 ```
 git checkout -b <branch>
+git add <file>
+git commit -m 'comment'
+git push --set-upstream origin <branch> 
+
 git fetch origin
 
 git checkout master
