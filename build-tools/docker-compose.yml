@@ -1,0 +1,9 @@
+version: "3"
+services:
+  staged_dev:
+    image: stage-it
+    environment:
+      VISUAL: 'vim'
+    volumes:
+      - ~/build_inbox:/share
+

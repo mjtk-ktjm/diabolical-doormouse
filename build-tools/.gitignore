@@ -1,0 +1,48 @@
+# https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+# https://github.com/github/gitignore/blob/master/Global/SublimeText.gitignore
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+# workspace files are user-specific
+*.sublime-workspace
+# Sublime-github package stores a github token in this file
+# https://packagecontrol.io/packages/sublime-github
+GitHub.sublime-settings
+
+# https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# credential files
+wp-config.php
+
+# other
+.env
+*.pyc
+
+#personal use
+.ignore_*
+docker-compose.override.yml
+config.py 
+.secrets

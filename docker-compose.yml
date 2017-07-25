@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ui:
+    build:
+      context: ./ui
+    ports:
+      - 80:80
+      - 8080:8080
+    networks:
+      - cluster-net
+  api:
+    build:
+      context: ./api
+    networks:
+      - cluster-net
+
+networks:
+  cluster-net:
+    driver: bridge
+
