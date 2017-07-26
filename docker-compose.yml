@@ -3,6 +3,8 @@ services:
   ui:
     build:
       context: ./ui
+      dockerfile: Dockerfile-ui
+    image: diabolical-doormouse-ui:latest
     ports:
       - 80:80
       - 8080:8080
@@ -16,12 +18,20 @@ services:
   api:
     build:
       context: ./api
+      dockerfile: Dockerfile-api
+    image: diabolical-doormouse-api:latest
     networks:
       - cluster-net
     env_file:
       - ./.env/test.env
     environment: *environment
-
+    extra_hosts:
+      - "google-dns:8.8.8.8"
+    healthcheck:
+      test: ["CMD", "ping", "-c3", "127.0.0.1"]
+      interval: 5m
+      timeout: 3s
+      retries: 3
 networks:
   cluster-net:
     driver: bridge
