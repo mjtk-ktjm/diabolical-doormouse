@@ -8,13 +8,25 @@ services:
       - 8080:8080
     networks:
       - cluster-net
+    environment: &environment
+      A_VAR: 'first-var'
+      ANOTHER_VAR: 'second-var'
+    volumes:
+      - "my-volume:/vol1"
   api:
     build:
       context: ./api
     networks:
       - cluster-net
+    env_file:
+      - ./.env/test.env
+    environment: *environment
 
 networks:
   cluster-net:
     driver: bridge
+
+volumes:
+  my-volume:
+
 
