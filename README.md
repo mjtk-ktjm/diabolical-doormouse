@@ -24,3 +24,9 @@ git push origin master
 git push origin -d <branch>
 git branch -d <branch>
 ```
+
+or...
+
+'create' a repo from the CLI:
+
+[Adding an existing project to GitHub using the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
